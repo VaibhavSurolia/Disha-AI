@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disha AI - Your Personal Roadmap Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-gray-200">
+
+    <!-- Landing Page -->
+    <div id="landing-page" class="min-h-screen flex flex-col justify-center items-center p-4 fade-in">
+        <div class="text-center w-full max-w-4xl mx-auto">
+             <header class="mb-12">
+                <div class="flex items-center justify-center gap-4">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="gradient-text"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m12 14 4-2-4-2-4 2 4 2z"></path><path d="M12 22v-8"></path></svg>
+                    <h1 class="text-6xl md:text-7xl font-extrabold gradient-text">Disha AI</h1>
+                </div>
+                <p class="mt-4 text-xl text-gray-400 max-w-2xl mx-auto">Stop wondering what's next. Start your journey with a clear, personalized plan.</p>
+                <div class="mt-8">
+                    <button id="get-started-btn" class="bg-blue-600 text-white font-bold py-3 px-10 text-lg rounded-lg btn-glow">Get Started</button>
+                </div>
+            </header>
+
+            <section id="features" class="mt-20">
+                <h2 class="text-3xl font-bold text-white mb-10">How Disha AI Guides You</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-lg bg-gray-700 mb-4">
+                            <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Conversational AI Coach</h3>
+                        <p class="text-gray-400">Instead of a simple form, Disha AI asks intelligent, clarifying questions to deeply understand your unique situation and ambitions.</p>
+                    </div>
+                     <!-- Feature 2 -->
+                    <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-lg bg-gray-700 mb-4">
+                           <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l5.447 2.724A1 1 0 0021 16.382V5.618a1 1 0 00-1.447-.894L15 7m-6 10v-5h6v5m0 0l-6-3"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Truly Personalized Roadmaps</h3>
+                        <p class="text-gray-400">Receive a detailed, step-by-step plan that's not generic. Your roadmap is built from your goals, interests, and time commitments.</p>
+                    </div>
+                     <!-- Feature 3 -->
+                    <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-lg bg-gray-700 mb-4">
+                             <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M4 17v4M2 19h4M17 3v4M15 5h4M17 17v4M15 19h4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Interactive & Sleek UI</h3>
+                        <p class="text-gray-400">A beautiful, modern dark theme with intuitive interactions makes planning your future an enjoyable and motivating experience.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer class="text-center mt-12 text-gray-500">
+            <p>&copy; 2025 Disha AI. All rights reserved.</p>
+        </footer>
+    </div>
+    
+    <!-- Main App Page -->
+    <div id="app-page" class="hidden min-h-screen flex-col items-center justify-center p-4">
+        <div class="w-full max-w-3xl mx-auto">
+            <header class="text-center mb-10">
+                <div class="flex items-center justify-center gap-4">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="gradient-text"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m12 14 4-2-4-2-4 2 4 2z"></path><path d="M12 22v-8"></path></svg>
+                    <h1 class="text-5xl md:text-6xl font-bold gradient-text">Disha AI</h1>
+                </div>
+                <p id="header-subtitle" class="mt-4 text-lg text-gray-400">Your personal guide to achieving any goal.</p>
+            </header>
+
+            <main class="bg-gray-800/50 backdrop-blur-sm p-6 md:p-8 rounded-2xl shadow-2xl border border-gray-700 fade-in-slow">
+                <!-- Initial Goal Input -->
+                <div id="initial-goal-container">
+                    <label for="initial-goal-input" class="block mb-2 font-semibold text-gray-300">What is your ultimate goal?</label>
+                    <textarea id="initial-goal-input" rows="4" class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg text-gray-200 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300" placeholder="e.g., 'Become a machine learning engineer' or 'Launch a handmade goods store'"></textarea>
+                    <p id="initial-goal-error" class="text-red-400 text-sm mt-2 hidden">Please describe your goal before proceeding.</p>
+                    <div class="mt-6 text-right">
+                       <button id="analyze-goal-btn" class="w-full sm:w-auto bg-blue-600 text-white font-bold py-2 px-8 rounded-lg hover:bg-blue-700 transition-all transform hover:scale-105 duration-200 btn-glow">Analyze My Goal</button>
+                    </div>
+                </div>
+
+                <!-- AI Generated Questions -->
+                <div id="ai-questions-container" class="hidden"></div>
+                
+                <!-- Results Section -->
+                <div id="result-container" class="mt-8 hidden">
+                     <div id="loader" class="hidden flex-col items-center justify-center text-center">
+                        <div class="loader"></div>
+                        <p id="loader-text" class="mt-4 text-gray-400"></p>
+                    </div>
+                    <div id="error-message" class="hidden p-4 bg-red-900/50 text-red-300 border border-red-700 rounded-lg"></div>
+                    <div id="roadmap-output" class="space-y-6"></div>
+                    <button id="start-over-btn" class="hidden mt-8 w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-blue-700 btn-glow">Start Over</button>
+                </div>
+            </main>
+            
+            <footer class="text-center mt-10 text-gray-500">
+                <p>&copy; 2025 Disha AI. All rights reserved.</p>
+            </footer>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
+
